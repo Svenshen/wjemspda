@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:text="车牌号"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_textView"
+        android:layout_weight="0.1"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/scan_chepaieditText"
+        android:layout_weight="0.1" />
+
+    <Button
+        android:text="查询"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_chaxunbutton"
+        android:layout_weight="0.1" />
+
+    <TextView
+        android:text="批次号"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_textView2"
+        android:layout_weight="0.1" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_spinner"
+        android:layout_weight="0.1" />
+
+    <Button
+        android:text="确定使用此批次"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_quedingbutton"
+        android:layout_weight="0.1" />
+
+    <Button
+        android:text="新建批次"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_xinjianbutton"
+        android:layout_weight="0.1" />
+
+
+</LinearLayout>

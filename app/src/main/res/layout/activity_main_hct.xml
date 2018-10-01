@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"   android:id="@+id/main_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff222222"
+    android:gravity="top"
+    >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        <com.hct.simplebluetoothscale.ScaleView
+            android:id="@+id/scaleView1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/Button_Search"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Bluetooth" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/Button_Unit"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="UNIT" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/Button_Tare"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="TARE" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/Button_Zero"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="ZERO" />
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

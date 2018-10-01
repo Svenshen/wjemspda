@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/androidTest/java/simplebluetoothscale/Bluetooth_Scale.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/androidTest/java/simplebluetoothscale/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/androidTest/java/simplebluetoothscale/ScaleView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/szh/wjemspda/buletooth/Bluetooth_Scale.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/szh/wjemspda/buletooth/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/szh/wjemspda/buletooth/ScaleView.java" charset="GBK" />
+  </component>
+</project>

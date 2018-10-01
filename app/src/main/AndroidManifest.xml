@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.saomiao4xinshiqi">
+
+    <!-- 连接互联网Internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.szh.wjemspda.MainActivity2"
+            android:label="@string/app_name1"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.szh.wjemspda.ScanActivity2"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.szh.wjemspda.ScanActivity"
+            android:label="@string/title_activity_sacan" />
+        <activity android:name="com.szh.wjemspda.ShujuguanliActivity"></activity>
+        <activity android:name="com.szh.wjemspda.buletooth.DeviceListActivity"
+            android:label="@string/ChooseDevice"
+            android:theme="@style/MyDialog1"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
+    </application>
+
+</manifest>
