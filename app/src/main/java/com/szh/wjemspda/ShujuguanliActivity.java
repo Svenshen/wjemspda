@@ -1,9 +1,12 @@
 package com.szh.wjemspda;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -96,10 +99,61 @@ public class ShujuguanliActivity extends Activity implements View.OnClickListene
 
                 break;
             case R.id.shuju_qingkongbutton:
-                mailDao.delete(chepaiedittext.getText().toString(),Integer.valueOf(picitext.getSelectedItem().toString()));
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle("请输入清空密码");
+                View viewx = LayoutInflater.from(this).inflate(R.layout.dialog_mima, null);
+                //    设置我们自己定义的布局文件作为弹出框的Content
+                dialog.setView(viewx);
+                final EditText mimaedittext2 = viewx.findViewById(R.id.mimainfo);
+                dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        if("1234".equals(mimaedittext2.getText().toString())){
+                            mailDao.delete(chepaiedittext.getText().toString(),Integer.valueOf(picitext.getSelectedItem().toString()));
+                            Toast.makeText(ShujuguanliActivity.this,"清除成功",Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(ShujuguanliActivity.this,"密码错误",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+                dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dialog.show();
                 break;
             case R.id.shuju_qingkongallbutton:
-                mailDao.deleteall();
+                AlertDialog.Builder dialog2 = new AlertDialog.Builder(this);
+                dialog2.setTitle("请输入清空密码");
+                View viewx2 = LayoutInflater.from(this).inflate(R.layout.dialog_mima, null);
+                //    设置我们自己定义的布局文件作为弹出框的Content
+                dialog2.setView(viewx2);
+
+                final EditText mimaedittext = viewx2.findViewById(R.id.mimainfo);
+                dialog2.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if("1234".equals(mimaedittext.getText().toString())){
+                            mailDao.deleteall();
+                            Toast.makeText(ShujuguanliActivity.this,"清除所有成功",Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(ShujuguanliActivity.this,"密码错误",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+                dialog2.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dialog2.show();
+
                 break;
             case R.id.shuju_chaxunbutton:
                 List<Integer> list = mailDao.findByChepaidistinctCheci(chepaiedittext.getText().toString());
